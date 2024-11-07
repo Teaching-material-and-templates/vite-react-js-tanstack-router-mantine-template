@@ -10,7 +10,6 @@ import { getSupabaseClient } from "./supabase/getSupabaseClient";
 
 export const router = createRouter({
   routeTree,
-  basepath: "/vite-react-js-tanstack-router-mantine-template/",
   context: {
     supabase: undefined!,
   },

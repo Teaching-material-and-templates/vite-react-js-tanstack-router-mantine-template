@@ -7,7 +7,7 @@ import {
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 
 export interface RouterContext {
-  supabase: string;
+  supabase: any;
 }
 
 export const Route = createRootRouteWithContext<RouterContext>()({

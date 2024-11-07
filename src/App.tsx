@@ -6,6 +6,7 @@ import { ModalsProvider } from "@mantine/modals";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 // Generated Routetree
 import { routeTree } from "./routeTree.gen";
+import { getSupabaseClient } from "./supabase/getSupabaseClient";
 
 export const router = createRouter({
   routeTree,
@@ -21,12 +22,13 @@ declare module "@tanstack/react-router" {
 }
 
 export default function App() {
-  // TODO: Create Supabase client
-
   return (
     <MantineProvider>
       <ModalsProvider>
-        <RouterProvider router={router} context={{ supabase: "hello" }} />
+        <RouterProvider
+          router={router}
+          context={{ supabase: getSupabaseClient() }}
+        />
       </ModalsProvider>
     </MantineProvider>
   );

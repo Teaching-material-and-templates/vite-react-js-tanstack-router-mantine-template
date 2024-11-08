@@ -32,3 +32,9 @@ These Mantine packages have been installed as part of this template:
 8. embla-carousel-react@^7.1.0
 9. @mantine/modals
 10. @mantine/spotlight
+
+## Supabase
+
+Supabase JS client has been installed as an npm package using [their guide](https://supabase.com/docs/reference/javascript/installing#install-as-package).
+
+And then in this project, the few boilerplate lines of code to initialize the client has been hidden away in [getSupabaseClient.js](src/supabase/getSupabaseClient.js)

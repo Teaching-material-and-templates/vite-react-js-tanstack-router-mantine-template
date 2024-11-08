@@ -1,14 +1,17 @@
 import { createClient } from "@supabase/supabase-js";
 
-let supabaseClient = undefined;
+// #######################################################
+// MODIFY THESE VARIABLES, TO YOUR SUPABASE INSTALLATION.
+// #######################################################
+const supabaseUrl = "https://xyzcompany.supabase.co";
+const publicAnonKey = "public-anon-key";
+// #######################################################
 
+let supabaseClientSingletong = undefined;
 export function getSupabaseClient() {
-  const supabaseUrl = "https://xyzcompany.supabase.co";
-  const publicAnonKey = "public-anon-key";
-
-  if (supabaseClient == undefined) {
-    supabaseClient = createClient(supabaseUrl, publicAnonKey);
+  if (supabaseClientSingletong == undefined) {
+    supabaseClientSingletong = createClient(supabaseUrl, publicAnonKey);
   }
 
-  return supabaseClient;
+  return supabaseClientSingletong;
 }
